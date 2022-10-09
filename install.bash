@@ -1,5 +1,6 @@
 #!/bin/bash
-if [ "$(uname)" == "linux" ]; then
+SYSTEM="$(uname)"
+if [ "$SYSTEM" == "Linux" ]; then
   rm -rf LICENSE README.md
   pkg install python postgresql
   pip install -r requirements.txt
