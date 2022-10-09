@@ -5,10 +5,9 @@ if [ "$SYSTEM" == "Linux" ]; then
   pkg install python postgresql
   pip install -r requirements.txt
   chmod +x ./scripts/main.py
-  export CAFE="$(pwd)/scripts/main.py"
-  export CAFEID="$(pwd)/scripts/id"
+  CAFE="$(pwd)/scripts/main.py"
   echo "Anything is installed! GG."
-  echo "Command to start the game - python \$CAFE"
+  echo "Command to start the game - python $CAFE"
 else
   echo "Installer can't starts on this system."
 fi
