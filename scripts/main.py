@@ -52,7 +52,7 @@ def guests():
             _order = Order(random.choice(_foods), random.choice(_foods))
             _guest = Guest("Алексей", _order)
             _guests.append(_guest)
-            _console.set_window_title(f"Cafeteria {__version__} ({len(_guests)} клиент.)")
+            _console.set_window_title(f"Cafeteria ({__version__}) ({len(_guests)} клиент.)")
 
 
 def createCafe():
@@ -172,6 +172,7 @@ def play():
         _cafe = loadCafe(res)
 
     while True:
+        _console.set_window_title(f"Cafeteria ({__version__}) ({len(_guests)} клиент.)")
         _console.clear()
         _cafe.save(cursor, pid)
         _console.print(
@@ -272,6 +273,7 @@ def menu():
     """
     global isCafeClosed
     while True:
+        _console.set_window_title(f"Cafeteria ({__version__})")
         _console.clear()
         _console.print("""
 
@@ -322,5 +324,6 @@ if __name__ == '__main__':
     menu()
     _console.print("Пока! ;)", style="green bold")
     time.sleep(0.5)
+
     os.system("cls" if __system__ == "win32" else "clear")
     sys.exit(1)
