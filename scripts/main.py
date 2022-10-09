@@ -22,7 +22,7 @@ connector.autocommit = True
 cursor = connector.cursor()
 
 # Консоль
-_console = console.Console()
+_console = console.Console(stderr=sys.stderr)
 __version__ = "1.0.0"
 __system__ = sys.platform
 
