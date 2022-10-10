@@ -2,7 +2,7 @@
 SYSTEM="$(uname)"
 if [ "$SYSTEM" == "Linux" ]; then
   rm -rf LICENSE README.md
-  pkg install python postgresql sudo
+  pkg install python postgresql tsu
   pip install -r requirements.txt
   chmod +x ./scripts/main.py
   CAFE="$(pwd)/scripts/main.py"
